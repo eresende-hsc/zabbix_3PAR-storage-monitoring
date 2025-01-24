@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Dependencies:
+# sudo apt-get install sshpass
+# sudo yum install sshpass
+# sudo dnf install sshpass
+
 # 3PAR Nagios check script v0.2
 # Last update 2010/05/14 fredl@3par.com
 # Last update 2011/03/03 ddu@antemeta.fr
@@ -53,6 +58,9 @@
 #                       Degraded ->     	Warning
 #                       Failed ->       	Critical
 #
+#       check_cap_ssd : Check used SSD capacity
+#                       >= $PCWARNINGNL ->      Warning
+#                       >= $PCCRITICALNL ->     Critical
 
 #if [ "$1" == "" ] || [ $2 == "" ] || [ $3 == "" ]
 #then
@@ -67,16 +75,23 @@ TMPDIR=/tmp/3par
 PCCRITICALFC=90
 PCWARNINGFC=80
 PCCRITICALNL=90
+PCCRITICALSSD=90
 PCWARNINGNL=80
+PCWARNINGSSD=80
+PASSWORD='[ your 3par password ]'
 
+# Create temp dir if it does not exists
+if [ ! -d $TMPDIR ] ; then
+ mkdir -p $TMPDIR
+fi
 # To connect using the 3PAR CLI, uncomment the following line
 #CONNECTCOMMAND="/opt/3PAR/inform_cli_2.3.1/bin/cli -sys $INSERV -pwf $USERNAME"
 # Note : connecting using the CLI requires creating password files (.pwf)
 
 # To connect using SSH. uncomment the following line
-CONNECTCOMMAND="ssh $USERNAME@$INSERV"
+#CONNECTCOMMAND="ssh $USERNAME@$INSERV"
+CONNECTCOMMAND="sshpass -p "$PASSWORD" ssh $USERNAME@$INSERV"
 # Note : connecting using SSH requires setting public key authentication
-
 
 #echo $INSERV $USERNAME $COMMAND >> $TMPDIR/3par_check_log.out
 
@@ -300,7 +315,9 @@ then
 
 	TOTCAPFC=`cat ${TMPDIR}/3par_${COMMAND}.${INSERV}.out | tail -1 | cut -d, -f1`
 	FREECAPFC=`cat ${TMPDIR}/3par_${COMMAND}.${INSERV}.out | tail -1 | cut -d, -f2`
-	USEDCAPPCFC=`expr 100 \- \( \( $FREECAPFC \* 100 \) \/ $TOTCAPFC \)`
+	USEDCAPPCFC=`expr 100 \- \( \( $FREECAPFC \* 100 \) \/ $TOTCAPFC \) 2>/dev/null`
+
+	[[ -z "$USEDCAPPCFC" ]] && USEDCAPPCFC=0
 
 	if [ $USEDCAPPCFC -ge $PCCRITICALFC ]
         then
@@ -340,7 +357,9 @@ then
 
         TOTCAPNL=`cat ${TMPDIR}/3par_${COMMAND}.${INSERV}.out | tail -1 | cut -d, -f1`
         FREECAPNL=`cat ${TMPDIR}/3par_${COMMAND}.${INSERV}.out | tail -1 | cut -d, -f2`
-        USEDCAPPCNL=`expr 100 \- \( \( $FREECAPNL \* 100 \) \/ $TOTCAPNL \)`
+        USEDCAPPCNL=`expr 100 \- \( \( $FREECAPNL \* 100 \) \/ $TOTCAPNL \) 2>/dev/null`
+
+	[[ -z "$USEDCAPPCNL" ]] && USEDCAPPCNL=0
 
         if [ $USEDCAPPCNL -ge $PCCRITICALNL ]
         then
@@ -361,4 +380,43 @@ then
         fi
 fi
 
+if [ $COMMAND == "check_cap_ssd" ]
+then
+        $CONNECTCOMMAND showpd -p -devtype SSD -showcols Size_MB,Free_MB -csvtable > $TMPDIR/3par_$COMMAND.$INSERV.out
+        if [ $? -gt 0 ]
+        then
+                echo Could not connect to InServ $INSERV
+                exit 3
+        fi
 
+        if [ `tail -1 $TMPDIR/3par_$COMMAND.$INSERV.out` = "No PDs listed" ]
+        then
+                echo No SSD disks
+        #        rm -f $TMPDIR/3par_$COMMAND.$INSERV.out
+                exit 0
+        fi
+
+        TOTCAPSSD=`cat ${TMPDIR}/3par_${COMMAND}.${INSERV}.out | tail -1 | cut -d, -f1`
+        FREECAPSSD=`cat ${TMPDIR}/3par_${COMMAND}.${INSERV}.out | tail -1 | cut -d, -f2`
+        USEDCAPPCSSD=`expr 100 \- \( \( $FREECAPSSD \* 100 \) \/ $TOTCAPSSD \) 2>/dev/null`
+
+        [[ -z "$USEDCAPPCSSD" ]] && USEDCAPPCSSD=0
+
+        if [ $USEDCAPPCSSD -ge $PCCRITICALSSD ]
+        then
+                echo CRITICAL! Used SSD capacity = $USEDCAPPCSSD\% \( \> $PCCRITICALSSD\% \)
+        #        rm -f $TMPDIR/3par_$COMMAND.$INSERV.out
+                exit 2
+        else
+                if [ $USEDCAPPCSSD -ge $PCWARNINGSSD ]
+                then
+                        echo WARNING! Used SSD capacity = $USEDCAPPCSSD\% \( \> $PCWARNINGSSD\% \)
+        #                rm -f $TMPDIR/3par_$COMMAND.$INSERV.out
+                        exit 1
+                else
+                        echo OK : Used SSD capacity = $USEDCAPPCSSD\%
+        #                rm -f $TMPDIR/3par_$COMMAND.$INSERV.out
+                        exit 0
+                fi
+        fi
+fi

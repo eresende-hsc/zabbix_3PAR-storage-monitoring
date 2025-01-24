@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>2.0</version>
-    <date>2014-10-19T22:26:54Z</date>
+    <version>6.0</version>
+    <date>2025-01-24T14:55:06Z</date>
     <groups>
         <group>
             <name>3Par hostgroup</name>
@@ -16,557 +16,288 @@
                     <name>3Par hostgroup</name>
                 </group>
             </groups>
-            <applications>
-                <application>
-                    <name>3PAR</name>
-                </application>
-            </applications>
             <items>
                 <item>
-                    <name>3PAR check_controller_node</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>test3par.sh[{IPADDRESS},&quot;check_node&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                </item>
-                <item>
-                    <name>3PAR check_logical_disk</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>test3par.sh[{IPADDRESS},&quot;check_ld&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                </item>
-                <item>
-                    <name>3PAR check_physical_disk</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>test3par.sh[{IPADDRESS},&quot;check_pd&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                </item>
-                <item>
-                    <name>3PAR check_port_fc</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>test3par.sh[{IPADDRESS},&quot;check_port_fc&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                </item>
-                <item>
-                    <name>3PAR check_PowerSupply_cage</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>test3par.sh[{IPADDRESS},&quot;check_ps_cage&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                </item>
-                <item>
-                    <name>3PAR check_PowerSupply_node</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
-                    <key>test3par.sh[{IPADDRESS},&quot;check_ps&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>1</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
-                </item>
-                <item>
+                    <uuid>106def93ca434597b52200278fad3c9b</uuid>
                     <name>3PAR check_Used_FC_capacity</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
+                    <type>EXTERNAL</type>
                     <key>test3par.sh[{IPADDRESS},&quot;check_cap_fc&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>2d6909c09729483895855c46cb471129</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_cap_fc&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR FC capacity Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>a9577537c1f8476fbd5010ddc22458f7</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_cap_fc&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR FC capacity Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
+                    <uuid>a003098bf85f45fba69150207248335f</uuid>
                     <name>3PAR check_used_NL_Capacity</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
+                    <type>EXTERNAL</type>
                     <key>test3par.sh[{IPADDRESS},&quot;check_cap_nl&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>1</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>19c8d2d2d69e4dd29dfff39a4e7569fa</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_cap_nl&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR NL capacity Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>d16ad3aba5364d95b312e9cccea7ac2f</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_cap_nl&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR NL capacity Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
+                    <uuid>2873955367b24661ab2b2d3a36117fab</uuid>
+                    <name>3PAR check_used_SSD_Capacity</name>
+                    <type>EXTERNAL</type>
+                    <key>test3par.sh[{IPADDRESS},&quot;check_cap_ssd&quot;]</key>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>f4474879a1114bb8be96badae40209a5</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_cap_ssd&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR SSD capacity Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>389d91830cec4a7a88dd5c727df2706a</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_cap_ssd&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR SSD capacity Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>83ef4824cc004328b2112e8e0a013aae</uuid>
+                    <name>3PAR check_logical_disk</name>
+                    <type>EXTERNAL</type>
+                    <key>test3par.sh[{IPADDRESS},&quot;check_ld&quot;]</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>013846c4e065481896abb625f744c5ea</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_ld&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR Logical disk Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>aca5b86c81894fd98936feb5a08f3c9e</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_ld&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR Logical disk Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>342ee7318b274ed0a22e5594d6eb9fc6</uuid>
+                    <name>3PAR check_controller_node</name>
+                    <type>EXTERNAL</type>
+                    <key>test3par.sh[{IPADDRESS},&quot;check_node&quot;]</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>e7d906131105489e99c095fd27d4e139</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_node&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR Controller node Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>64cc5bf0863a4a8abfff3e1cdbe2270e</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_node&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR Controller node Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>45b1f95e95d9453a865090aa10030797</uuid>
+                    <name>3PAR check_physical_disk</name>
+                    <type>EXTERNAL</type>
+                    <key>test3par.sh[{IPADDRESS},&quot;check_pd&quot;]</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>abf819d9859d495380efd4727b811c4b</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_pd&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR Physical disk Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>ce3eba0a03aa4d31a29538cfca3a2d6c</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_pd&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR Physical disk Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>ab0c927cc39349fabe494d446b743cf6</uuid>
+                    <name>3PAR check_port_fc</name>
+                    <type>EXTERNAL</type>
+                    <key>test3par.sh[{IPADDRESS},&quot;check_port_fc&quot;]</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>267eed3d1f5444d3981a9ed6fdc978b2</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_port_fc&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR Port FC Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>33a6779f2b5f4d38b9694130f357a9ce</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_port_fc&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR Port FC Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>f2722346665f430ab0b31cf51152c4f7</uuid>
+                    <name>3PAR check_PowerSupply_node</name>
+                    <type>EXTERNAL</type>
+                    <key>test3par.sh[{IPADDRESS},&quot;check_ps&quot;]</key>
+                    <trends>0</trends>
+                    <value_type>CHAR</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>2e347ca1aa6042598faaf645321a42a9</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_ps&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR PowerSupply Node Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>37ee980483a741799e0a9468401cbb10</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_ps&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR PowerSupply Node Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>408d9e9980604a22abfc59b3bca97a54</uuid>
+                    <name>3PAR check_PowerSupply_cage</name>
+                    <type>EXTERNAL</type>
+                    <key>test3par.sh[{IPADDRESS},&quot;check_ps_cage&quot;]</key>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>f0a93588d5824f84b98f900184da78c9</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_ps_cage&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR PowerSupply cage Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>de3dc92d92ac42219237067499a74aa9</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_ps_cage&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR PowerSupply cage Warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <uuid>65c2e06d5f0e4deaacf29da75911389d</uuid>
                     <name>3PAR check_virtual_volumes</name>
-                    <type>10</type>
-                    <snmp_community/>
-                    <multiplier>0</multiplier>
-                    <snmp_oid/>
+                    <type>EXTERNAL</type>
                     <key>test3par.sh[{IPADDRESS},&quot;check_vv&quot;]</key>
-                    <delay>30</delay>
-                    <history>90</history>
-                    <trends>365</trends>
-                    <status>1</status>
-                    <value_type>4</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications>
-                        <application>
-                            <name>3PAR</name>
-                        </application>
-                    </applications>
-                    <valuemap/>
+                    <trends>0</trends>
+                    <value_type>TEXT</value_type>
+                    <tags>
+                        <tag>
+                            <tag>Application</tag>
+                            <value>3PAR</value>
+                        </tag>
+                    </tags>
+                    <triggers>
+                        <trigger>
+                            <uuid>7b51819a46ef472bbc5b24b181742ad5</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_vv&quot;],,&quot;like&quot;,&quot;CRITICAL!&quot;)=1</expression>
+                            <name>3PAR Virtual volumes Critical: {ITEM.VALUE}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                        <trigger>
+                            <uuid>1a00551f926b4c709515913f1e15bd25</uuid>
+                            <expression>find(/3par Storage monitoring 2/test3par.sh[{IPADDRESS},&quot;check_vv&quot;],,&quot;like&quot;,&quot;WARNING!&quot;)=1</expression>
+                            <name>3PAR Virtual volumes warning: {ITEM.VALUE}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
                 </item>
             </items>
-            <discovery_rules/>
-            <macros/>
-            <templates/>
-            <screens/>
         </template>
     </templates>
-    <triggers>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_node&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR Controller node Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_node&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR Controller node Warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_cap_fc&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR FC capacity Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_cap_fc&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR FC capacity Warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_ld&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR Logical disk Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_ld&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR Logical disk Warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_pd&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR Physical disk Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_pd&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR Physical disk Warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_port_fc&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR Port FC Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_port_fc&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR Port FC Warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_ps_cage&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR PowerSupply cage Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_ps_cage&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR PowerSupply cage Warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_ps&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR PowerSupply Node Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_ps&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR PowerSupply Node Warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_vv&quot;].str(CRITICAL!)}=1</expression>
-            <name>3PAR Virtual volumes Critical: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-        <trigger>
-            <expression>{3par Storage monitoring:test3par.sh[{IPADDRESS},&quot;check_vv&quot;].str(WARNING!)}=1</expression>
-            <name>3PAR Virtual volumes warning: {ITEM.VALUE}</name>
-            <url/>
-            <status>1</status>
-            <priority>2</priority>
-            <description/>
-            <type>0</type>
-            <dependencies/>
-        </trigger>
-    </triggers>
 </zabbix_export>
